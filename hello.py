@@ -15,7 +15,9 @@ app = Flask(__name__)
 #  路由
 @app.route('/')
 def hello_world():
-    return 'hello world!'
+    # return 'hello world!'
+    return  render_template("index.html")
+
 
 
 # 变量规则
