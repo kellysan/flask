@@ -12,7 +12,7 @@ from flask import Flask, redirect, url_for, request, render_template
 app = Flask(__name__)
 
 
-#  路由
+#  路由  静态文件
 @app.route('/')
 def hello_world():
     # return 'hello world!'
@@ -89,6 +89,15 @@ def result():
     dict = {'phy':50, 'che':60, 'maths':70}
     return render_template('hello2.html', result = dict)
 
-# 静态文件
+# Request对象
+"""
+Form - 它是一个字典对象，包含表单参数及其值的键和值对。
+args - 解析查询字符串的内容，它是问号（？）之后的URL的一部分。
+Cookies  - 保存Cookie名称和值的字典对象。
+files - 与上传文件有关的数据。
+method - 当前请求方法。
+"""
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
